@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibliothèque Technique Pro</title>
+    <title>Systems Library | Professionnel</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-dark: #121212; /* Noir mat */
-            --card-bg: #1a1a1a; /* Noir grisâtre pour les cartes */
-            --accent-gold: #a67c52; /* Marron doré/bronze */
+            --bg-dark: #0f0f0f; 
+            --card-bg: #161616;
+            --accent-gold: #a67c52; 
             --text-main: #e0e0e0;
             --text-muted: #888;
         }
@@ -26,15 +26,16 @@
         header {
             padding: 80px 20px 40px;
             text-align: center;
-            border-bottom: 1px solid #222;
+            border-bottom: 1px solid #1a1a1a;
         }
 
         header h1 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             margin: 0;
             color: #fff;
+            text-transform: uppercase;
         }
 
         header p {
@@ -43,48 +44,32 @@
             font-size: 0.8rem;
             letter-spacing: 4px;
             margin-top: 15px;
+            font-weight: 300;
         }
 
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             padding: 60px 40px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
+        /* L-Book Card Design */
         .book-card {
             background: var(--card-bg);
-            padding: 40px 30px;
-            border-radius: 4px;
-            border: 1px solid #282828;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 45px 35px;
+            border: 1px solid #222;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             position: relative;
-            overflow: hidden;
-        }
-
-        /* L-khet l-ghameq f l-jenb */
-        .book-card::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 3px;
-            background: var(--accent-gold);
-            opacity: 0.5;
-            transition: 0.3s;
+            cursor: default;
         }
 
         .book-card:hover {
             border-color: var(--accent-gold);
-            transform: translateY(-5px);
-            background: #1f1f1f;
-        }
-
-        .book-card:hover::before {
-            opacity: 1;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
 
         .category {
@@ -92,37 +77,42 @@
             color: var(--accent-gold);
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
+            letter-spacing: 2.5px;
+            margin-bottom: 25px;
             display: block;
         }
 
         .book-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 15px;
             font-weight: 600;
             color: #fff;
+            font-family: 'Playfair Display', serif;
         }
 
         .book-card p {
             font-size: 0.9rem;
             color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 30px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            min-height: 60px;
         }
 
+        /* L-bouton li ghadi idik l-ktab */
         .btn {
             text-decoration: none;
             color: #fff;
             background: transparent;
-            border: 1px solid #444;
-            padding: 12px 25px;
+            border: 1px solid #333;
+            padding: 14px 30px;
             font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             transition: 0.3s;
             display: inline-block;
+            width: calc(100% - 60px);
+            text-align: center;
         }
 
         .btn:hover {
@@ -133,9 +123,11 @@
 
         footer {
             text-align: center;
-            padding: 40px;
-            color: #444;
-            font-size: 0.8rem;
+            padding: 60px;
+            color: #333;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -143,41 +135,43 @@
 
     <header>
         <h1>SYSTEMS LIBRARY</h1>
-        <p>Hub Technique de Référence</p>
+        <p>Expertise Technique & Digital Assets</p>
     </header>
 
     <main class="container">
+        
         <div class="book-card">
             <span class="category">Développement</span>
             <h3>Python Engineering</h3>
-            <p>Architecture logicielle, automatisation et développement back-end avancé.</p>
-            <a href="#" class="btn">Accéder au Manuel</a>
+            <p>Guide complet sur l'automatisation et les structures de données avancées.</p>
+            <a href="https://docs.python.org/3/" target="_blank" class="btn">Accéder au Manuel</a>
         </div>
 
         <div class="book-card">
             <span class="category">Réseau & Systèmes</span>
             <h3>Infrastructures IT</h3>
-            <p>Conception réseau, adressage VLSM et gestion des serveurs ESXi.</p>
-            <a href="#" class="btn">Accéder au Manuel</a>
+            <p>Maîtrise de l'adressage VLSM, Cisco IOS et virtualisation VMware/ESXi.</p>
+            <a href="https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html" target="_blank" class="btn">Accéder au Manuel</a>
         </div>
 
         <div class="book-card">
             <span class="category">Intelligence Artificielle</span>
             <h3>AI Logic & Data</h3>
-            <p>Implémentation des modèles de Machine Learning et traitement de données.</p>
-            <a href="#" class="btn">Accéder au Manuel</a>
+            <p>Comprendre les réseaux de neurones, le Deep Learning et l'IA générative.</p>
+            <a href="https://ai.google/" target="_blank" class="btn">Accéder au Manuel</a>
         </div>
 
         <div class="book-card">
             <span class="category">Cybersécurité</span>
             <h3>Security Assets</h3>
-            <p>Protection des systèmes d'information et protocoles de sécurité réseau.</p>
-            <a href="#" class="btn">Accéder au Manuel</a>
+            <p>Protocoles de protection, cryptographie et sécurisation des flux réseaux.</p>
+            <a href="https://www.cyber.gc.ca/fr" target="_blank" class="btn">Accéder au Manuel</a>
         </div>
+
     </main>
 
     <footer>
-        &copy; 2026 Repository Technique Professionnel
+        &copy; 2026 Archive Technique Professionnelle
     </footer>
 
 </body>
