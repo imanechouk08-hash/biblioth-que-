@@ -4,48 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ma Bibliothèque Tech</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Hna fin khellat l-alwan o l-design kamel */
+        :root {
+            --soft-gold: #c5a059;
+            --blush: #fff5f5;
+            --text-color: #333;
+            --accent: #d4a373;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fffcf9;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #fff0f0, #fffcf9);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin: 0;
+            letter-spacing: 2px;
+            color: #2c2c2c;
+        }
+
+        header p {
+            font-style: italic;
+            color: var(--soft-gold);
+            margin-top: 10px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Design dyal l-ktoba (Cards) */
+        .book-card {
+            background: white;
+            padding: 30px;
+            border: 1px solid #f0e6e6;
+            text-align: center;
+            transition: 0.4s ease;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+
+        .book-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--soft-gold);
+            box-shadow: 0 15px 40px rgba(197, 160, 89, 0.1);
+        }
+
+        .category {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--soft-gold);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .book-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .book-card p {
+            font-size: 0.9rem;
+            color: #777;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: #2c2c2c;
+            border-bottom: 1px solid var(--soft-gold);
+            padding-bottom: 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            color: var(--soft-gold);
+            letter-spacing: 1px;
+        }
+
+        /* L-khet li l-taht */
+        .footer-line {
+            height: 1px;
+            background: #eee;
+            width: 50%;
+            margin: 50px auto;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>Bibliothèque Numérique Tech</h1>
-        <p>Explorez l'univers de l'Informatique, du Développement et de l'IA</p>
+        <h1>L'Atelier Numérique</h1>
+        <p>Une collection raffinée pour le Dev, Réseau et l'IA</p>
     </header>
 
-    <main class="library-grid">
-        <!-- Section Développement -->
-        <div class="book-card dev">
-            <div class="category">Développement</div>
-            <h3>Apprendre Python</h3>
-            <p>Maîtrisez la logique de programmation pour vos projets.</p>
-            <button>Lire plus</button>
+    <main class="container">
+        <div class="book-card">
+            <span class="category">Développement</span>
+            <h3>Modern Python</h3>
+            <p>Apprendre le code avec une structure propre et élégante.</p>
+            <a href="#" class="btn">Découvrir le livre</a>
         </div>
 
-        <!-- Section Réseau -->
-        <div class="book-card network">
-            <div class="category">Réseaux</div>
-            <h3>Architecture Réseau & VLSM</h3>
-            <p>Tout sur l'adressage IP et la configuration Cisco.</p>
-            <button>Lire plus</button>
+        <div class="book-card">
+            <span class="category">Réseau</span>
+            <h3>Infrastructures IT</h3>
+            <p>Maîtriser le VLSM et l'architecture réseau professionnel.</p>
+            <a href="#" class="btn">Découvrir le livre</a>
         </div>
 
-        <!-- Section Intelligence Artificielle -->
-        <div class="book-card ai">
-            <div class="category">IA</div>
-            <h3>Le Guide de l'IA</h3>
-            <p>Comprendre le Deep Learning et les modèles génératifs.</p>
-            <button>Lire plus</button>
+        <div class="book-card">
+            <span class="category">Intelligence Artificielle</span>
+            <h3>Futur & Data</h3>
+            <p>Exploration des modèles d'IA et de l'innovation technologique.</p>
+            <a href="#" class="btn">Découvrir le livre</a>
         </div>
 
-        <!-- Section Sécurité -->
-        <div class="book-card security">
-            <div class="category">Sécurité</div>
-            <h3>Cybersécurité</h3>
-            <p>Protéger les actifs informatiques et les systèmes.</p>
-            <button>Lire plus</button>
+        <div class="book-card">
+            <span class="category">Sécurité</span>
+            <h3>Cyber-Elegance</h3>
+            <p>La protection des systèmes d'information et des données.</p>
+            <a href="#" class="btn">Découvrir le livre</a>
         </div>
     </main>
+
+    <div class="footer-line"></div>
 
 </body>
 </html>
